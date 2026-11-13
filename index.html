@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Практика 3 — Кондаров</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="eyebrow">ПРАКТИКА 03 / ELECTRON</div><h1>Файловый обозреватель</h1><p>Кондаров Дмитрий Александрович · ТРПО23-1 · Вариант 5</p></header>
+<main><form id="form"><label for="path">Путь к каталогу</label><div class="controls"><input id="path" value="." spellcheck="false" autocomplete="off"><button id="refresh" type="submit">Обновить список</button></div></form>
+<section aria-label="Содержимое каталога"><div class="section-head"><h2>Содержимое</h2><button id="hide" type="button">Скрыть в трей</button></div><p id="location"></p><ul id="entries"></ul></section>
+<p id="status" role="status" aria-live="polite"></p></main><footer>Закрытие окна скрывает приложение. Чтобы вернуться, выберите «Показать» в меню значка в трее. Для завершения — «Выйти».</footer>
+<script src="renderer.js"></script></body></html>

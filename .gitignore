@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.log
+
+.vs/
+node_modules/
+dist/

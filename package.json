@@ -1,0 +1,49 @@
+{
+  "name": "kondarov-file-explorer",
+  "version": "1.0.0",
+  "description": "Практика 3 — файловый обозреватель и системный трей",
+  "author": "Кондаров Дмитрий Александрович, ТРПО23-1",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "test": "node --test tests/*.test.js"
+  },
+  "devDependencies": {
+    "electron": "45.3.1",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "ru.fa.kondarov.practice03",
+    "productName": "Kondarov File Explorer",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "directory.js",
+      "index.html",
+      "style.css",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}

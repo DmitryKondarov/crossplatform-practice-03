@@ -1,0 +1,1 @@
+Directory test: PASS. Electron launch: 0xC0000005. NSIS build: npm dependency tree failure. Remote repository: not created.
